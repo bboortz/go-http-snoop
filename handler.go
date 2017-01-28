@@ -7,6 +7,7 @@ import (
 	//"go-rsslib"
 	"fmt"
 	"net/http"
+	"sort"
 	"time"
 )
 
@@ -49,8 +50,17 @@ func HandlerSnoopHeader(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 	fmt.Fprint(w, "</table>\n")
 
 	fmt.Fprint(w, "<h2>Request Header</h2><table><tr><th>KEY</th><th>VALUE</th></tr>\n")
-	for k, v := range r.Header {
-		fmt.Fprint(w, "<tr><td>"+k+"</td><td>"+v[0]+"</td></tr>\n")
+
+	// To store the keys in slice in sorted order
+	var keys []string
+	for k := range r.Header {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+
+	// To perform the opertion you want
+	for _, k := range keys {
+		fmt.Fprint(w, "<tr><td>"+k+"</td><td>"+r.Header[k][0]+"</td></tr>\n")
 	}
 
 	fmt.Fprint(w, "</body></html>\n")
