@@ -15,6 +15,12 @@
 			"revisionTime": "2017-01-04T12:51:07Z"
 		},
 		{
+			"checksumSHA1": "dvabztWVQX8f6oMLRyv4dLH+TGY=",
+			"path": "github.com/davecgh/go-spew/spew",
+			"revision": "346938d642f2ec3594ed81d874461961cd0faa76",
+			"revisionTime": "2016-10-29T20:57:26Z"
+		},
+		{
 			"checksumSHA1": "Y3U6on66N0BszKXYvb2Q+qpG6f4=",
 			"path": "github.com/julienschmidt/httprouter",
 			"revision": "8a45e95fc75cb77048068a62daed98cc22fdac7c",
