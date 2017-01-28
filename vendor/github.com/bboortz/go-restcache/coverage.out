@@ -1,0 +1,18 @@
+mode: set
+github.com/bboortz/go-restcache/handler.go:17.84,26.58 7 1
+github.com/bboortz/go-restcache/handler.go:29.2,29.54 1 1
+github.com/bboortz/go-restcache/handler.go:26.58,27.13 1 0
+github.com/bboortz/go-restcache/handler.go:35.84,44.58 7 1
+github.com/bboortz/go-restcache/handler.go:47.2,47.54 1 1
+github.com/bboortz/go-restcache/handler.go:44.58,45.13 1 0
+github.com/bboortz/go-restcache/handler.go:54.55,59.96 5 1
+github.com/bboortz/go-restcache/handler.go:62.2,62.54 1 1
+github.com/bboortz/go-restcache/handler.go:59.96,60.13 1 0
+github.com/bboortz/go-restcache/handler.go:64.37,64.74 1 1
+github.com/bboortz/go-restcache/handler.go:66.63,71.105 5 1
+github.com/bboortz/go-restcache/handler.go:74.2,74.54 1 1
+github.com/bboortz/go-restcache/handler.go:71.105,72.13 1 0
+github.com/bboortz/go-restcache/handler.go:76.45,76.90 1 1
+github.com/bboortz/go-restcache/logger.go:12.78,15.2 2 1
+github.com/bboortz/go-restcache/logger.go:17.101,19.2 1 1
+github.com/bboortz/go-restcache/router.go:7.37,16.2 6 1

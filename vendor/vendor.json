@@ -1,0 +1,31 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "wauoxiUi+P7HLQ7qJgM78wVydP0=",
+			"path": "github.com/bboortz/go-restcache",
+			"revision": "6c84a7fa0b407780db085fe78653bb7f4f891937",
+			"revisionTime": "2017-01-04T12:52:39Z"
+		},
+		{
+			"checksumSHA1": "+DSy5g5Bkt4sabQdpqbPd9gDG0k=",
+			"path": "github.com/bboortz/go-utils",
+			"revision": "7d950de255322ec7d8717ce6ab7848a3059a71ed",
+			"revisionTime": "2017-01-04T12:51:07Z"
+		},
+		{
+			"checksumSHA1": "Y3U6on66N0BszKXYvb2Q+qpG6f4=",
+			"path": "github.com/julienschmidt/httprouter",
+			"revision": "8a45e95fc75cb77048068a62daed98cc22fdac7c",
+			"revisionTime": "2017-01-04T18:58:16Z"
+		},
+		{
+			"checksumSHA1": "BoXdUBWB8UnSlFlbnuTQaPqfCGk=",
+			"path": "github.com/op/go-logging",
+			"revision": "970db520ece77730c7e4724c61121037378659d9",
+			"revisionTime": "2016-03-15T20:05:05Z"
+		}
+	],
+	"rootPath": "github.com/bboortz/go-http-snoop"
+}
