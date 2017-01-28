@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/bboortz/go-restcache"
-	"github.com/davecgh/go-spew/spew"
+	//	"github.com/davecgh/go-spew/spew"
 	"github.com/julienschmidt/httprouter"
 	//"go-rsslib"
 	"fmt"
@@ -18,12 +18,14 @@ var headerContentTypeValue string = "application/json; charset=UTF-8"
  */
 func HandlerSnoop(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	start := time.Now()
-	w.Header().Set(headerContentTypeKey, headerContentTypeValue)
-	w.Header().Set("Access-Control-Allow-Origin", "*")
 	var statusCode int = http.StatusOK
 
 	w.WriteHeader(statusCode)
-	fmt.Fprint(w, "Welcome!\n")
+	fmt.Fprint(w, "<html><head><title>snoop</title></head><body><h1>snoop</h1>\n")
+	fmt.Fprint(w, "<h2>Links</h2>\n")
+	fmt.Fprint(w, "<p><a href='/snoop/header'>Header</a></p>\n")
+
+	fmt.Fprint(w, "</body></html>\n")
 
 	restcache.LogAccess(r.Method, r.RequestURI, statusCode, start)
 
@@ -34,12 +36,10 @@ func HandlerSnoop(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
  */
 func HandlerSnoopHeader(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	start := time.Now()
-	//	w.Header().Set(headerContentTypeKey, headerContentTypeValue)
-	//	w.Header().Set("Access-Control-Allow-Origin", "*")
 	var statusCode int = http.StatusOK
 
 	w.WriteHeader(statusCode)
-	fmt.Fprint(w, "<html><head><title>snoop</title></head><body><h1>snoop</h1><h2>Request Information</h2>\n")
+	fmt.Fprint(w, "<html><head><title>snoop</title></head><body><h1>snoop</h1>\n")
 	fmt.Fprint(w, "<h2>Request Information</h2><table><tr><th>KEY</th><th>VALUE</th></tr>\n")
 	fmt.Fprint(w, "<tr><td>CLIENT IP:PORT</td><td>"+r.RemoteAddr+"</td></tr>\n")
 	fmt.Fprint(w, "<tr><td>METHOD</td><td>"+r.Method+"</td></tr>\n")
@@ -52,10 +52,8 @@ func HandlerSnoopHeader(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 	for k, v := range r.Header {
 		fmt.Fprint(w, "<tr><td>"+k+"</td><td>"+v[0]+"</td></tr>\n")
 	}
-	spew.Dump(r)
 
 	fmt.Fprint(w, "</body></html>\n")
-	fmt.Fprint(w, "Welcome!\n")
 	restcache.LogAccess(r.Method, r.RequestURI, statusCode, start)
 
 }
